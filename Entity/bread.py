@@ -30,5 +30,5 @@ class Bread:
 
     def __str__(self):
         return (f"Bread: Color = {self.__color},"
-                f"Flour = {self.__flour},"
-                f"Price = ${self.__price}")
+                f" Flour = {self.__flour},"
+                f" Price = ${self.__price}")

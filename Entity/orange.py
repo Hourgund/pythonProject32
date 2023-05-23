@@ -30,5 +30,5 @@ class Orange:
 
     def __str__(self):
         return (f"Orange: Diameter = {self.__diameter},"
-                f"Vitamin C = {self.__vitamin},"
-                f"Cost = ${self.__cost}")
+                f" Vitamin C = {self.__vitamin},"
+                f" Cost = ${self.__cost}")
