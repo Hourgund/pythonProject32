@@ -1,6 +1,4 @@
-from Entity.milk import Milk
-from Entity.orange import Orange
-from Entity.bread import Bread
+from Entity.product import Product
 from Container.basket import Basket
 
 
@@ -12,13 +10,7 @@ class ShopAssistance:
             for i in range(basket.size):
                 product = basket.get_product(i)
 
-                if isinstance(product, Milk):
-                    total += product.money
-
-                if isinstance(product, Bread):
+                if isinstance(product, Product):
                     total += product.price
-
-                if isinstance(product, Orange):
-                    total += product.cost
 
             return total

@@ -1,8 +1,11 @@
-class Milk:
-    def __init__(self, volume=0, fat=0, money=0):
+from Entity.product import Product
+
+
+class Milk(Product):
+    def __init__(self, volume=0, fat=0, price=0):
+        super().__init__(price)
         self.__volume = volume
         self.__fat = fat
-        self.__money = money
 
     @property
     def volume(self):
@@ -20,15 +23,7 @@ class Milk:
     def fat(self, fat):
         self.__fat = fat
 
-    @property
-    def money(self):
-        return self.__money
-
-    @money.setter
-    def money(self, money):
-        self.__money = money
-
     def __str__(self):
         return (f"Milk: Volume = {self.__volume},"
                 f" Fat = {self.__fat},"
-                f" Money = ${self.__money}")
+                f" Price = ${self.price}")
