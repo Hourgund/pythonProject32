@@ -31,4 +31,4 @@ class Milk:
     def __str__(self):
         return (f"Milk: Volume = {self.__volume},"
                 f"Fat = {self.__fat},"
-                f"Money = {self.__money}")
+                f"Money = ${self.__money}")

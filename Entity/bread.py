@@ -1,4 +1,4 @@
-class Orange:
+class Bread:
     def __init__(self, color='black', flour="first", price=0):
         self.__color = color
         self.__flour = flour
@@ -31,4 +31,4 @@ class Orange:
     def __str__(self):
         return (f"Bread: Color = {self.__color},"
                 f"Flour = {self.__flour},"
-                f"Price = {self.__price}")
+                f"Price = ${self.__price}")
