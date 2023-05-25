@@ -4,8 +4,10 @@ from Entity.product import Product
 class Orange(Product):
     def __init__(self, diameter=100, vitamin=1000, price=0):
         super().__init__(price)
-        self.__diameter = diameter
-        self.__vitamin = vitamin
+
+        self.__diameter = diameter if diameter > 0 else 100
+        self.__vitamin = vitamin if vitamin >= 0 else 1000
+
 
     @property
     def diameter(self):
@@ -13,7 +15,8 @@ class Orange(Product):
 
     @diameter.setter
     def diameter(self, diameter):
-        self.__diameter = diameter
+        if diameter > 0:
+            self.__diameter = diameter
 
     @property
     def vitamin(self):
@@ -21,7 +24,8 @@ class Orange(Product):
 
     @vitamin.setter
     def vitamin(self, vitamin):
-        self.__vitamin = vitamin
+        if vitamin >= 0:
+            self.__vitamin = vitamin
 
     def __str__(self):
         return (f"Orange: Diameter = {self.__diameter},"
