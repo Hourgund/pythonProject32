@@ -1,5 +1,6 @@
 from Entity.product import Product
 
+
 class Basket:
     def __init__(self, products=None):
         if not products:
